@@ -8,12 +8,7 @@ const AllBooks = () => {
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(false);
 
-    // useEffect(()=>{
-    //     fetch('https://api.itbook.store/1.0/new')
-    //     .then(res => res.json())
-    //     .then(data=> setAllBooks(data.books))
-    // },[])
-
+   
 
     useEffect(() => {
         setLoading(true);
@@ -37,7 +32,6 @@ const AllBooks = () => {
                 if (page === 1) {
                     for (let i = 6; i < 12; i++) {
                         let book = data[i]
-                        // console.log(user);
                         bookData.push(book)
                     }
                     setAllBooks(bookData);
